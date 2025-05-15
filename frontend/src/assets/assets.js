@@ -21,3 +21,13 @@ export const assets = {
     PPF,
     Polishing,
 }
+
+export const products = [
+
+    
+
+
+
+
+
+]

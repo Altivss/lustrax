@@ -2,62 +2,39 @@ import React from 'react'
 import { assets } from '../assets/assets'
 
 const Car = () => {
+  const items = [
+    { src: assets.PPF, label: 'PPF (Paint Protection Film)' },
+    { src: assets.tint, label: 'Tint' },
+    { src: assets.Microfiber, label: 'Microfiber' },
+    { src: assets.ceramic, label: 'Ceramic' },
+    { src: assets.lubricants, label: 'Lubricants' },
+    { src: assets.Polishing, label: 'Polishing' },
+  ]
+
   return (
     <div className='my-10'>
-        <div className='text-center py-8 text-3xl'>
-            <h1 className='text-white-700 font-medium'>Car Care</h1>
-        </div>
-       <div className="text-center grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6">
-  {/* PPF */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.PPF} className="w-full h-full object-cover rounded-xl" alt="PPF" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">PPF (Paint Protection Film)</p>
-  </div>
+      <div className='text-center py-8 text-3xl'>
+        <h1 className='text-white font-medium'>Car Care</h1>
+      </div>
 
-  {/* Tint */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.tint} className="w-full h-full object-cover rounded-xl" alt="Tint" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">Tint</p>
-  </div>
-
-  {/* Microfiber */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.Microfiber} className="w-full h-full object-cover rounded-xl" alt="Microfiber" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">Microfiber</p>
-  </div>
-
-  {/* Ceramic */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.ceramic} className="w-full h-full object-cover rounded-xl" alt="Ceramic" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">Ceramic</p>
-  </div>
-
-  {/* Lubricants */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.lubricants} className="w-full h-full object-cover rounded-xl" alt="Lubricants" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">Lubricants</p>
-  </div>
-
-  {/* Polishing */}
-  <div>
-    <div className="aspect-square w-full mt-5">
-      <img src={assets.Polishing} className="w-full h-full object-cover rounded-xl" alt="Polishing" />
-    </div>
-    <p className="font-semibold text-2xl mt-2">Polishing</p>
-  </div>
-</div>
-
-        
+      <div className="text-center grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6">
+        {items.map(({ src, label }, i) => (
+          <div key={i} className="group cursor-pointer flex flex-col items-center">
+            {/* Square image with overlay */}
+            <div className="relative w-full aspect-square overflow-hidden rounded-xl">
+              <img
+                src={src}
+                alt={label}
+                className="w-full h-full object-cover rounded-xl transition-transform duration-500"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <p className="text-white text-lg font-semibold text-center px-4">{label}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
