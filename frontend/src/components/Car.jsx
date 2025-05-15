@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom'
 const Car = () => {
   const items = [
     { src: assets.PPF, label: 'PPF (Paint Protection Film)' },
-    { src: assets.tint, label: 'Tint' },
-    { src: assets.Microfiber, label: 'Microfiber' },
-    { src: assets.ceramic, label: 'Ceramic' },
-    { src: assets.lubricants, label: 'Lubricants' },
-    { src: assets.Polishing, label: 'Polishing' },
+    { src: assets.tint, label: 'CERAMIC CAR TINT' },
+    { src: assets.Microfiber, label: 'MICROFIBER CLOTH' },
+    { src: assets.ceramic, label: 'CERAMIC COATING' },
+    { src: assets.lubricants, label: 'LUBRICANTS' },
+    { src: assets.Polishing, label: 'POLISHING WAX' },
   ]
   
   const navigate = useNavigate()
