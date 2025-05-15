@@ -3,7 +3,7 @@ import { assets } from '../assets/assets';
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white px-6 py-10">
+    <div className="bg-black text-white px-6 py-10 bg-black">
       {/* Logo + Company horizontally aligned and vertically centered */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-10">
         {/* Left: Logo + Privacy below */}

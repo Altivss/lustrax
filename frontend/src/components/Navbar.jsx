@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className='flex items-center justify-between py-1 font-medium relative'>
+    <div className='flex items-center justify-between py-1 font-medium relative bg-black'>
       <nav className='flex-1 hidden sm:flex gap-3 text-sm text-white-500 justify-start'>
         <NavLink to='/' className='flex flex-col items-center gap-0.5'>
           <p>Home</p>
